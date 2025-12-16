@@ -28,11 +28,7 @@
       line-height:1.35;
     }
 
-    .container{
-      max-width: 520px;
-      margin: 28px auto;
-      padding: 16px;
-    }
+    .container{ max-width: 520px; margin: 28px auto; padding: 16px; }
 
     .card{
       background: var(--card);
@@ -50,33 +46,13 @@
       gap:14px;
     }
 
-    .logo{
-      width: 132px;
-      height:auto;
-      display:block;
-    }
+    .logo{ width: 132px; height:auto; display:block; }
 
-    .header-meta{
-      flex:1;
-      min-width:0;
-    }
+    .header-meta{ flex:1; min-width:0; }
+    .header-title{ margin:0; font-size: 16px; font-weight: 800; letter-spacing: .2px; }
+    .header-sub{ margin:4px 0 0; font-size: 12px; color: var(--muted); }
 
-    .header-title{
-      margin:0;
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: .2px;
-    }
-
-    .header-sub{
-      margin:4px 0 0;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .content{
-      padding: 18px;
-    }
+    .content{ padding: 18px; }
 
     .product{
       border-radius: 14px;
@@ -85,12 +61,7 @@
       background:#fff;
       margin-bottom: 16px;
     }
-
-    .product img{
-      width:100%;
-      display:block;
-    }
-
+    .product img{ width:100%; display:block; }
     .product-caption{
       padding: 10px 12px;
       display:flex;
@@ -115,12 +86,7 @@
       white-space:nowrap;
     }
 
-    .steps{
-      display:flex;
-      gap:8px;
-      margin: 0 0 14px;
-    }
-
+    .steps{ display:flex; gap:8px; margin: 0 0 14px; }
     .dot{
       height:8px;
       flex:1;
@@ -140,37 +106,16 @@
     }
     .dot.active::after{ transform: translateX(0); }
 
-    h1,h2{
-      margin: 0 0 12px;
-      color: var(--text);
-      font-weight: 900;
-      letter-spacing: .2px;
-    }
+    h1,h2{ margin: 0 0 12px; color: var(--text); font-weight: 900; letter-spacing: .2px; }
     h1{ font-size: 22px; }
     h2{ font-size: 18px; }
 
-    .muted{
-      color: var(--muted);
-      font-size: 13px;
-      margin: 0 0 14px;
-    }
+    .muted{ color: var(--muted); font-size: 13px; margin: 0 0 14px; }
 
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-    }
-    @media (max-width: 520px){
-      .grid{ grid-template-columns: 1fr; }
-    }
+    .grid{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    @media (max-width: 520px){ .grid{ grid-template-columns: 1fr; } }
 
-    label{
-      display:block;
-      font-size: 12px;
-      color: var(--muted);
-      margin: 0 0 6px;
-      font-weight: 700;
-    }
+    label{ display:block; font-size: 12px; color: var(--muted); margin: 0 0 6px; font-weight: 700; }
 
     input, select{
       width:100%;
@@ -199,21 +144,10 @@
       border: 1px solid rgba(229,231,235,.8);
       margin-top: 8px;
     }
-    .consent input{
-      width: 18px;
-      height: 18px;
-      margin: 2px 0 0;
-    }
-    .consent span{
-      font-size: 12px;
-      color: var(--muted);
-    }
+    .consent input{ width: 18px; height: 18px; margin: 2px 0 0; }
+    .consent span{ font-size: 12px; color: var(--muted); }
 
-    .actions{
-      display:flex;
-      gap:10px;
-      margin-top: 14px;
-    }
+    .actions{ display:flex; gap:10px; margin-top: 14px; }
     button{
       width:100%;
       border: none;
@@ -227,10 +161,7 @@
       box-shadow: 0 10px 22px rgba(230,0,30,.15);
     }
     button:active{ transform: translateY(1px); }
-    button.primary{
-      background: var(--brand);
-      color:#fff;
-    }
+    button.primary{ background: var(--brand); color:#fff; }
     button.secondary{
       background: #f3f4f6;
       color: #111827;
@@ -241,14 +172,12 @@
 
     .step{ display:none; animation: fadeIn .35s ease; }
     .step.active{ display:block; }
+
     @keyframes fadeIn{
       from{ opacity:0; transform: translateY(6px); }
       to{ opacity:1; transform: translateY(0); }
     }
 
-    .center{
-      text-align:center;
-    }
     .coupon{
       font-size: 24px;
       font-weight: 1000;
@@ -259,6 +188,29 @@
       border-radius: 14px;
       padding: 14px 12px;
       margin: 14px 0 10px;
+      text-align:center;
+    }
+
+    .qr-wrap{
+      display:flex;
+      justify-content:center;
+      margin-top: 10px;
+    }
+    .qr{
+      width: 160px;
+      height: 160px;
+      border-radius: 14px;
+      border: 1px solid rgba(229,231,235,.9);
+      background:#fff;
+      padding: 10px;
+      box-shadow: 0 10px 22px rgba(17,24,39,.08);
+      object-fit: contain;
+    }
+    .qr-help{
+      margin: 8px 0 0;
+      text-align:center;
+      font-size: 12px;
+      color: var(--muted);
     }
 
     .error{
@@ -285,7 +237,6 @@
       </div>
 
       <div class="content">
-
         <!-- Progress -->
         <div class="steps" aria-hidden="true">
           <div class="dot" id="dot-1"></div>
@@ -293,12 +244,14 @@
           <div class="dot" id="dot-3"></div>
         </div>
 
+        <!-- STEP 1 -->
         <div id="step-1" class="step active">
           <h1>Commencer</h1>
           <p class="muted">Choisis ton pays pour adapter la langue et le marché.</p>
 
           <div class="product">
-            <img src="https://twicpics.moulinex.fr/https://dam.groupeseb.com/m/7349489192eb91a7/Digital-MLX_CE9828_COOKEO-INFINITY-BLACK_H2.tiff?timestamp=20250528133116&amp;twic=v1/quality=70/resize=2000" alt="Cookeo Infinity Black" />
+            <img src="https://twicpics.moulinex.fr/https://dam.groupeseb.com/m/7349489192eb91a7/Digital-MLX_CE9828_COOKEO-INFINITY-BLACK_H2.tiff?timestamp=20250528133116&amp;twic=v1/quality=70/resize=2000"
+                 alt="Cookeo Infinity Black" />
             <div class="product-caption">
               <span>Cookeo Infinity Black</span>
               <span class="badge">Collect In Pack</span>
@@ -320,6 +273,7 @@
           </div>
         </div>
 
+        <!-- STEP 2 -->
         <div id="step-2" class="step">
           <h2>Vos informations</h2>
           <p class="muted">Renseigne ton identité et le numéro de série pour enregistrer ton produit.</p>
@@ -327,17 +281,17 @@
           <div class="grid">
             <div class="row">
               <label for="firstName">Prénom</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Ex. Antoine" autocomplete="given-name" />
+              <input type="text" id="firstName" name="firstName" placeholder="Ex. Jean" autocomplete="given-name" />
             </div>
             <div class="row">
               <label for="lastName">Nom</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Ex. Lejeune" autocomplete="family-name" />
+              <input type="text" id="lastName" name="lastName" placeholder="Ex. Dupont" autocomplete="family-name" />
             </div>
           </div>
 
           <div class="row">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="ex. antoine.lejeune@email.com" autocomplete="email" />
+            <input type="email" id="email" name="email" placeholder="ex. jean.dupont@email.com" autocomplete="email" />
           </div>
 
           <div class="row">
@@ -347,9 +301,7 @@
 
           <div class="consent">
             <input type="checkbox" id="marketingConsent" name="marketingConsent" />
-            <span>
-              J'accepte de recevoir des communications marketing et des offres de la part de Moulinex.
-            </span>
+            <span>J'accepte de recevoir des communications marketing et des offres de la part de Moulinex.</span>
           </div>
 
           <div class="actions">
@@ -358,6 +310,7 @@
           </div>
         </div>
 
+        <!-- STEP 3 -->
         <div id="step-3" class="step">
           <h2>Satisfaction produit</h2>
           <p class="muted">Quelques questions rapides pour mieux vous connaître.</p>
@@ -387,15 +340,25 @@
           </div>
         </div>
 
+        <!-- REWARD -->
         <div id="step-reward" class="step">
           <h2>Merci !</h2>
           <p class="muted">Votre coupon est prêt.</p>
+
           <div id="coupon-code" class="coupon">XXXX-XXXX-XXXX</div>
+
+          <!-- QR CODE (sous le code promo) -->
+          <div class="qr-wrap">
+            <img id="coupon-qr" class="qr" alt="QR code coupon" src="" />
+          </div>
+          <p class="qr-help">Scannez ce QR code pour enregistrer / utiliser votre coupon.</p>
+
           <div class="actions">
             <button class="primary" onclick="resetForm()">Recommencer</button>
           </div>
         </div>
 
+        <!-- ERROR -->
         <div id="step-error" class="step">
           <h2>Oups…</h2>
           <p class="muted">Une erreur est survenue.</p>
@@ -409,180 +372,203 @@
     </div>
   </div>
 
-<script>
-const apiKey = 'dd011790-9b7a-40fe-839f-c6dd4c2991c5';
+  <script>
+    const apiKey = 'dd011790-9b7a-40fe-839f-c6dd4c2991c5';
 
-const setProgress = (step) => {
-  const s = String(step);
-  ['1','2','3'].forEach(n => {
-    const el = document.getElementById('dot-' + n);
-    if (!el) return;
-    el.classList.toggle('active', n === s);
-  });
-};
-
-const goToStep = (step) => {
-  document.querySelectorAll('.step').forEach((el) => el.classList.remove('active'));
-  const target = document.querySelector(`#step-${step}`);
-  if (target) target.classList.add('active');
-
-  // Progress only for numbered steps
-  if (String(step) === '1' || String(step) === '2' || String(step) === '3') setProgress(step);
-};
-
-const resetForm = () => {
-  // reset fields
-  ['firstName','lastName','email','serialNumber'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.value = '';
-  });
-  const mc = document.getElementById('marketingConsent');
-  if (mc) mc.checked = false;
-
-  // reset selects
-  const satisfaction = document.getElementById('satisfaction');
-  if (satisfaction) satisfaction.value = '3';
-  const usage = document.getElementById('usage');
-  if (usage) usage.value = 'quotidien';
-  const country = document.getElementById('country');
-  if (country) country.value = 'France';
-
-  // reset coupon
-  const coupon = document.getElementById('coupon-code');
-  if (coupon) coupon.textContent = 'XXXX-XXXX-XXXX';
-
-  goToStep(1);
-};
-
-// ID simple pour le coupon
-const generateId = () => 'cpn-' + Math.random().toString(36).substring(2, 10);
-// Code coupon aléatoire
-const generateCouponCode = () => 'MOULINEX-' + Math.floor(100000 + Math.random() * 900000);
-
-const setSubmitting = (isSubmitting) => {
-  const btn = document.getElementById('submitBtn');
-  if (!btn) return;
-  btn.disabled = isSubmitting;
-  btn.textContent = isSubmitting ? 'Envoi…' : 'Valider';
-};
-
-async function submitForm() {
-  try {
-    setSubmitting(true);
-
-    // 1) Récupération des valeurs du formulaire
-    const firstName = (document.getElementById('firstName')?.value || '').trim();
-    const lastName  = (document.getElementById('lastName')?.value  || '').trim();
-    const email     = (document.getElementById('email')?.value     || '').trim();
-    const serial    = (document.getElementById('serialNumber')?.value || '').trim();
-    const marketingConsent = !!document.getElementById('marketingConsent')?.checked;
-    const satisfaction = document.getElementById('satisfaction')?.value;
-    const usage = document.getElementById('usage')?.value;
-    const country = document.getElementById('country')?.value;
-
-    if (!firstName || !lastName || !email) {
-      document.getElementById('error-message').textContent =
-        'Merci de renseigner au minimum votre prénom, votre nom et votre email.';
-      setSubmitting(false);
-      return goToStep('error');
-    }
-
-    const now = new Date().toISOString();
-
-    // 2) Payload RCU – UNIQUEMENT les champs présents dans le schéma
-    const rcuPayload = {
-      dateOfBirth: null,
-      city: '',
-      country: country,
-      email: email,
-      firstName: firstName,
-      gender: '',
-      language: 'fr',
-      lastName: lastName,
-      mobile: '',
-      origin: 'CollectInPack',
-      title: '',
-      zipCode: '',
-      createdDate: now,
-      lastModifiedDate: now,
-      optInEmail: marketingConsent,
-      optInPush: false,
-      optInSMS: false,
-      optInWhatsApp: false
+    const setProgress = (step) => {
+      const s = String(step);
+      ['1','2','3'].forEach(n => {
+        const el = document.getElementById('dot-' + n);
+        if (!el) return;
+        el.classList.toggle('active', n === s);
+      });
     };
 
-    console.log('➡️ RCU payload envoyé :', rcuPayload);
+    const goToStep = (step) => {
+      document.querySelectorAll('.step').forEach((el) => el.classList.remove('active'));
+      const target = document.querySelector(`#step-${step}`);
+      if (target) target.classList.add('active');
 
-    const rcuResponse = await fetch(
-      'https://francois-sandbox.saas.imagino.com/ucdapi/RCU_API/1/RCU_Seb',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-API-KEY': apiKey
-        },
-        body: JSON.stringify(rcuPayload)
-      }
-    );
-
-    if (!rcuResponse.ok) {
-      const errText = await rcuResponse.text();
-      console.error('❌ RCU error:', errText);
-      document.getElementById('error-message').textContent =
-        "Une erreur est survenue lors de l'enregistrement du profil.";
-      setSubmitting(false);
-      return goToStep('error');
-    }
-
-    // 3) Génération du coupon
-    const couponId = generateId();
-    const couponCode = generateCouponCode();
-
-    const couponPayload = {
-      Assignation_date: now,
-      IDCoupon: couponId,
-      Code_Coupon: couponCode,
-      Id_Contact: email
+      // Progress only for numbered steps
+      if (String(step) === '1' || String(step) === '2' || String(step) === '3') setProgress(step);
     };
 
-    console.log('➡️ Coupon payload envoyé :', couponPayload);
+    const resetForm = () => {
+      // reset fields (aucun pré-remplissage)
+      ['firstName','lastName','email','serialNumber'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
 
-    const couponResponse = await fetch(
-      'https://francois-sandbox.saas.imagino.com/ucdapi/API_coupons/1/Coupons_Imagino',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-API-KEY': apiKey
-        },
-        body: JSON.stringify(couponPayload)
+      const mc = document.getElementById('marketingConsent');
+      if (mc) mc.checked = false;
+
+      // reset selects
+      const satisfaction = document.getElementById('satisfaction');
+      if (satisfaction) satisfaction.value = '3';
+      const usage = document.getElementById('usage');
+      if (usage) usage.value = 'quotidien';
+      const country = document.getElementById('country');
+      if (country) country.value = 'France';
+
+      // reset coupon + QR
+      const coupon = document.getElementById('coupon-code');
+      if (coupon) coupon.textContent = 'XXXX-XXXX-XXXX';
+      const qr = document.getElementById('coupon-qr');
+      if (qr) qr.src = '';
+
+      goToStep(1);
+    };
+
+    // ID simple pour le coupon
+    const generateId = () => 'cpn-' + Math.random().toString(36).substring(2, 10);
+
+    // Code coupon aléatoire
+    const generateCouponCode = () => 'MOULINEX-' + Math.floor(100000 + Math.random() * 900000);
+
+    const setSubmitting = (isSubmitting) => {
+      const btn = document.getElementById('submitBtn');
+      if (!btn) return;
+      btn.disabled = isSubmitting;
+      btn.textContent = isSubmitting ? 'Envoi…' : 'Valider';
+    };
+
+    // Ce que le QR code encode (tu peux mettre une URL si tu veux)
+    const buildQrValue = (couponCode) => {
+      // exemple: encode un texte
+      return `Coupon: ${couponCode}`;
+      // alternative: encode une URL
+      // return `https://moulinex.example/coupon?code=${encodeURIComponent(couponCode)}`;
+    };
+
+    const setCouponQr = (couponCode) => {
+      const qrValue = buildQrValue(couponCode);
+      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(qrValue)}`;
+      const qrImg = document.getElementById('coupon-qr');
+      if (qrImg) qrImg.src = qrUrl;
+    };
+
+    async function submitForm() {
+      try {
+        setSubmitting(true);
+
+        // 1) Récupération des valeurs du formulaire
+        const firstName = (document.getElementById('firstName')?.value || '').trim();
+        const lastName  = (document.getElementById('lastName')?.value || '').trim();
+        const email     = (document.getElementById('email')?.value || '').trim();
+        const serial    = (document.getElementById('serialNumber')?.value || '').trim();
+
+        const marketingConsent = !!document.getElementById('marketingConsent')?.checked;
+        const satisfaction = document.getElementById('satisfaction')?.value;
+        const usage = document.getElementById('usage')?.value;
+        const country = document.getElementById('country')?.value;
+
+        if (!firstName || !lastName || !email) {
+          document.getElementById('error-message').textContent =
+            'Merci de renseigner au minimum votre prénom, votre nom et votre email.';
+          setSubmitting(false);
+          return goToStep('error');
+        }
+
+        const now = new Date().toISOString();
+
+        // 2) Payload RCU – UNIQUEMENT les champs présents dans le schéma
+        const rcuPayload = {
+          dateOfBirth: null,
+          city: '',
+          country: country,
+          email: email,
+          firstName: firstName,
+          gender: '',
+          language: 'fr',
+          lastName: lastName,
+          mobile: '',
+          origin: 'CollectInPack',
+          title: '',
+          zipCode: '',
+          createdDate: now,
+          lastModifiedDate: now,
+          optInEmail: marketingConsent,
+          optInPush: false,
+          optInSMS: false,
+          optInWhatsApp: false
+        };
+
+        console.log('➡️ RCU payload envoyé :', rcuPayload);
+
+        const rcuResponse = await fetch(
+          'https://francois-sandbox.saas.imagino.com/ucdapi/RCU_API/1/RCU_Seb',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-API-KEY': apiKey
+            },
+            body: JSON.stringify(rcuPayload)
+          }
+        );
+
+        if (!rcuResponse.ok) {
+          const errText = await rcuResponse.text();
+          console.error('❌ RCU error:', errText);
+          document.getElementById('error-message').textContent =
+            "Une erreur est survenue lors de l'enregistrement du profil.";
+          setSubmitting(false);
+          return goToStep('error');
+        }
+
+        // 3) Génération du coupon
+        const couponId = generateId();
+        const couponCode = generateCouponCode();
+
+        const couponPayload = {
+          Assignation_date: now,
+          IDCoupon: couponId,
+          Code_Coupon: couponCode,
+          Id_Contact: email
+        };
+
+        console.log('➡️ Coupon payload envoyé :', couponPayload);
+
+        const couponResponse = await fetch(
+          'https://francois-sandbox.saas.imagino.com/ucdapi/API_coupons/1/Coupons_Imagino',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-API-KEY': apiKey
+            },
+            body: JSON.stringify(couponPayload)
+          }
+        );
+
+        if (!couponResponse.ok) {
+          const errText = await couponResponse.text();
+          console.error('❌ Coupon error:', errText);
+          document.getElementById('error-message').textContent =
+            "Votre profil a été enregistré, mais une erreur est survenue lors de la création du coupon.";
+          setSubmitting(false);
+          return goToStep('error');
+        }
+
+        // 4) Affichage du coupon + QR
+        document.getElementById('coupon-code').textContent = couponCode;
+        setCouponQr(couponCode);
+
+        setSubmitting(false);
+        goToStep('reward');
+
+      } catch (e) {
+        console.error('❌ Erreur technique:', e);
+        document.getElementById('error-message').textContent =
+          'Une erreur technique inattendue est survenue.';
+        setSubmitting(false);
+        goToStep('error');
       }
-    );
-
-    if (!couponResponse.ok) {
-      const errText = await couponResponse.text();
-      console.error('❌ Coupon error:', errText);
-      document.getElementById('error-message').textContent =
-        "Votre profil a été enregistré, mais une erreur est survenue lors de la création du coupon.";
-      setSubmitting(false);
-      return goToStep('error');
     }
 
-    // 4) Affichage du coupon
-    document.getElementById('coupon-code').textContent = couponCode;
-    setSubmitting(false);
-    goToStep('reward');
-  } catch (e) {
-    console.error('❌ Erreur technique:', e);
-    document.getElementById('error-message').textContent =
-      'Une erreur technique inattendue est survenue.';
-    setSubmitting(false);
-    goToStep('error');
-  }
-}
-
-// init
-setProgress(1);
-</script>
+    // init
+    setProgress(1);
+  </script>
 </body>
 </html>
